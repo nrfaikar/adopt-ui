@@ -4,8 +4,13 @@
 
 // Overrides: atom/static/panels.less
 
+.panel {
+  background-color: @dark-gray;
+}
+
 .panel-heading {
-  border-bottom: 1px solid @panel-heading-border-color;
+  font-weight: bold;
+  border-top: 1px solid @panel-heading-border-color;
   background-color: @panel-heading-background-color;
 }
 
@@ -24,4 +29,5 @@ atom-panel.modal {
   border: 1px solid @overlay-border-color;
   border-top: none;
   box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+  background-color: @very-dark-gray;
 }

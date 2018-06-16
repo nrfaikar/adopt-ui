@@ -14,43 +14,17 @@ body {
   background-color: @app-background-color;
 }
 
-atom-pane {
-  background-color: @dark-gray;
-  border-right: 1px solid @base-border-color;
-  &:last-child {
-    border-right: none;
+atom-pane-container {
+  atom-pane {
+    background-color: @dark-gray;
+    border-right: 1px solid @base-border-color;
+    &:last-child {
+      border-right: none;
+    }
+    .item-views .pane-item {
+      background-color: @dark-gray;
+    }
   }
-}
-
-.list-group .selected::before,
-.list-tree .selected::before {
-  background-color: @gray;
-}
-
-// Input -------------------
-.placeholder-text {
-  color: @text-color-subtle !important;
-}
-
-.form-control {
-  color: @text-color;
-  background-color: @input-background-color !important;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  border-bottom: 2px solid @base-highlight-color !important;
-  padding-left: 0;
-  font-size: 14px;
-
-  &:active {
-    color: @text-color-selected !important;
-    border-bottom-color: @base-highlight-color-active !important;
-  }
-}
-
-select, option {
-  color: @text-color;
-  font-size: 14px;
 }
 
 
@@ -58,10 +32,6 @@ select, option {
 .scrollbars-visible-always ::-webkit-scrollbar {
   width: 3px;
   height: 3px;
-
-  &:hover {
-    width: 5px;
-  }
 
   &-thumb {
     background-color: lighten(@gray, 5%);

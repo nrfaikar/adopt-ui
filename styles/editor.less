@@ -8,15 +8,26 @@
 atom-text-editor[mini] {
   color: @text-color;
   background-color: @input-background-color;
-  border-bottom: 2px solid @base-highlight-color;
+  border-bottom: 1px solid @base-highlight-color;
+  padding-bottom: 1px;
   font-size: 14px;
 
   &.is-focused {
     color: @text-color-selected;
     border-bottom-color: @base-highlight-color-active;
+    border-bottom-width: 2px;
+    padding-bottom: 0;
   }
 
   .selection .region {
     background-color: @background-color-selected;
   }
+}
+
+.styleguide .example .example-code {
+  background-color: @very-dark-gray;
+}
+
+.styleguide-sections > section {
+  background-color: @dark-gray;
 }

@@ -20,7 +20,10 @@
   }
   &.selected {
     color: @text-color-selected;
-    background-color: @button-background-color-selected;
+    background-color: darken(@button-background-color, 2%);
+    &:hover {
+      background-color: darken(@button-background-color, 2%);
+    }
   }
   &:focus,
   &:focus:active {

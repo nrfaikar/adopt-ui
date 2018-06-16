@@ -1,7 +1,8 @@
 
-// GitHub Commit View
+// GitHub
 // -------------------
-.github-CommitView-editor {
+.github-CommitView-editor,
+.github-HunkView {
   background-color: @dark-gray;
 
   .github-CommitView-coAuthorToggle,
@@ -28,4 +29,18 @@
 // -------------------
 .debugger-container .debugger-controls-section {
   border-color: transparent;
+}
+
+
+// Minimap
+// -------------------
+atom-text-editor atom-text-editor-minimap .minimap-visible-area::after {
+  background-color: rgba(127, 137, 142, .1);
+}
+
+
+// Deprecation Cop
+// -------------------
+.deprecation-cop {
+  background-color: inherit !important;
 }

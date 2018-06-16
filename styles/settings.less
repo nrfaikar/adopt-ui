@@ -3,14 +3,35 @@
 // -------------------
 
 .settings-view {
+  .alert {
+    border-color: @very-dark-gray;
+  }
+  
   .config-menu,
   .settings-panel,
   .section, .panels-item {
     background-color: @dark-gray;
   }
 
+  .config-menu li a:hover {
+    background-color: @gray !important;
+  }
+
   .themes-picker-item .btn {
     margin-left: 10px;
     height: 31px;
+  }
+
+  .config-menu li.active {
+    .icon-settings, a {
+      color: @blue !important;
+    }
+  }
+
+  .package-card {
+    background-color: inherit;
+    &:hover {
+      background-color: @gray;
+    }
   }
 }
