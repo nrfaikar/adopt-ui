@@ -4,23 +4,31 @@
 
 // Displays selectable tabs above the editor.
 // Overrides: atom/tabs
+.workspace .horizontal > :not(.left) {
+  .tab-bar .tab {
+    &.active {
+      color: @text-color-selected;
+      border-top-color: @tab-highlight-color-active;
+      background-color: @tab-background-color-active;
+      flex: 1;
+    }
+  }
+}
 
 .tab-bar {
   background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
+  overflow-x: auto;
+  overflow-y: hidden;
 
   .tab {
     color: @text-color;
     height: @tab-height;
     line-height: @tab-height;
     font-size: @font-size;
-    border-right: 1px solid @tab-border-color;
+    border-top: 2px solid transparent;
     background-color: @tab-background-color;
-    &.active {
-      color: @text-color-selected;
-      background-color: @tab-background-color-active;
-    }
-
+    min-width: 100px;
+    overflow: hidden;
 
     // Modified Icon (the circle) -------------------
     &.modified:not(:hover) .close-icon {
@@ -52,6 +60,14 @@
       & .close-icon {
         visibility: hidden;
       }
+    }
+
+
+    // Icons -------------------
+    .title:before {
+      margin-right: .2em;
+      line-height: 1;
+      font-size: 1em;
     }
   }
 }

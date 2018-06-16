@@ -9,6 +9,22 @@
 .status-bar {
   font-size: @font-size;
   color: @text-color;
-  border-top: 1px solid @base-border-color;
-  background-color: @tree-view-background-color;
+  background-color: @blue;
+  height: 25px;
+
+  .status-bar-right {
+    padding: 0;
+  }
+
+  a, span {
+    color: @base-background-color !important;
+    font-weight: bold;
+    line-height: 25px;
+  }
+
+  a:hover, span:hover {
+    color: inherit;
+    text-decoration: none !important;
+    cursor: pointer;
+  }
 }

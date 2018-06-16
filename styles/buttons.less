@@ -6,8 +6,9 @@
 
 
 .btn {
-  color: lighten(@text-color, 6%);
+  color: white;
   background-color: @button-background-color;
+  font-weight: bold;
   &:hover,
   &:focus {
     color: @text-color-highlight;
@@ -37,7 +38,7 @@
 .btn.btn-error   { .btn-color(@background-color-error); }
 
 .btn-color(@bg) {
-  color: @text-color-selected;
+  color: white;
   background-color: @bg;
   &:hover,
   &:focus {
@@ -60,4 +61,5 @@
 
 .btn-group > .btn {
   border-color: hsla(0,0%,0%,.2);
+  border-color: transparent;
 }
