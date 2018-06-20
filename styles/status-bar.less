@@ -9,17 +9,17 @@
 .status-bar {
   font-size: @font-size;
   color: @text-color;
-  background-color: @blue;
-  height: 25px;
+  background-color: @base-background-color;
+  height: 23px;
 
   .status-bar-right {
     padding: 0;
   }
 
   a, span, .selection-count, .highlight-selected-status, .buffer-modified::after {
-    color: @base-background-color !important;
-    font-weight: bold;
-    line-height: 25px;
+    color: @text-color-selected !important;
+    // font-weight: bold;
+    line-height: 23px;
   }
 
   a:hover, span:hover {

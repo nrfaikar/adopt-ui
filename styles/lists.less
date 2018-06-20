@@ -24,9 +24,11 @@
 .list-tree {
   color: @text-color;
   .selected {
-    color: @text-color-selected;
+    color: @text-color-selected !important;
+    font-weight: 500;
     &::before {
-      background-color: rgba(0, 188, 212, .05);
+      // background-color: rgba(0, 188, 212, .05);
+      background-color: @blue;
     }
   }
 }
