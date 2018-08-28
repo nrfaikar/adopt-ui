@@ -29,15 +29,18 @@ atom-pane-container {
 
 
 // Scroll Bar -------------------
-.scrollbars-visible-always ::-webkit-scrollbar {
-  background-color: @gray;
-  width: 3px;
-  height: 3px;
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 
   &-thumb {
     background-color: lighten(@gray, 10%);
     &:active {
       background-color: lighten(@gray, 20%);
     }
+  }
+
+  &-corner {
+    background-color: transparent;
   }
 }

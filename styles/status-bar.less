@@ -12,19 +12,34 @@
   background-color: @base-background-color;
   height: 23px;
 
-  .status-bar-right {
+  .flexbox-repaint-hack, .status-bar-right, .status-bar-left {
     padding: 0;
   }
 
   a, span, .selection-count, .highlight-selected-status, .buffer-modified::after {
     color: @text-color-selected !important;
-    // font-weight: bold;
     line-height: 23px;
   }
 
-  a:hover, span:hover {
-    color: inherit;
+  a, div {
+    padding: 0 5px;
+  }
+
+  * {
+    margin: 0 !important;
+  }
+
+  .inline-block:hover {
+    background-color: @gray;
+    cursor: pointer !important;
+  }
+
+  *:hover {
     text-decoration: none !important;
-    cursor: pointer;
+  }
+
+  .icon:before {
+    margin: 0;
+    margin-right: 2px;
   }
 }
